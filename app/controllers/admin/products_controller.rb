@@ -1,4 +1,7 @@
 class Admin::ProductsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_required
+
   def index
     @products = Product.all
   end
@@ -13,7 +16,6 @@ class Admin::ProductsController < ApplicationController
 
    def update
      @product = Product.find(params[:id])
-
      if @product.update(product_params)
        redirect_to admin_products_path
      else
