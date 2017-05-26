@@ -1,9 +1,6 @@
 class Admin::ProductsController < ApplicationController
-<<<<<<< HEAD
-=======
   layout "admin"
 
->>>>>>> story5
   before_action :authenticate_user!
   before_action :admin_required
 
