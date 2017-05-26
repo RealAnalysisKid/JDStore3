@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JDStore </title>
+        <title>多啦A梦的百宝箱 - 订制专属的哆啦A梦</title>
         <%= csrf_meta_tags %>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,9 +11,11 @@
     <body>
 
         <div class="container-fluid">
+          <div class="row">
             <%= render "common/navbar" %>
             <%= render "common/flashes" %>
             <%= yield %>
+          </div>
         </div>
 
         <%= render "common/footer" %>

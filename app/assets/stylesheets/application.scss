@@ -16,3 +16,60 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+
+
+   //---------Box---------
+
+   .box {
+     background-image: url("header.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     margin-bottom: 50px;
+
+     .box-inner {
+         background-color: rgba(250, 250, 250, 0.69);
+         padding-bottom: 5px;
+         margin-bottom: 150px;
+     }
+
+     .title {
+         text-align: center;
+         margin-bottom: 80px;
+     }
+
+     .slogan {
+         color: #222;
+         margin-top: 10px;
+         margin-bottom: 50px;
+         text-align: center;
+         font-size: 25px;
+         top: 12px;
+     }
+
+     .lead {
+         margin-bottom: 60px;
+         text-align: center;
+         color: white;
+     }
+   }
+
+//------------商品分类---------
+
+.user_setup {
+  background-image: url("setup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .box {
+    background-image: url("header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -10px;
+  // margin-bottom: 50px;
+ }
+}
+
+//-------------登录页面--------
+.login-box {
+  background-image: url(login.jpg);
+}

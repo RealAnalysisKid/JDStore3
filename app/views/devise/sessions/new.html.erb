@@ -1,15 +1,149 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>多啦A梦的百宝箱 - 订制专属的哆啦A梦</title>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+  <body>
+    <header id="home" data-spy="scroll" data-target="#top-nav">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="navbar navbar-default navbar-fixed-top default-menu menu-4" role="navigation">
+            <div class="container">
+              <div class="navbar-header">
+                <!--=== Logo ===-->
+                <a class="navbar-brand default-logo scroll" href="/">
+                  哆啦A梦的百宝箱
+                </a>
+              </div>
+              <div class="collapse navbar-collapse top-nav" id="menu-4">
+                <!--=== 网站连结 ===-->
+                <ul class="nav navbar-nav navbar-left">
+                  <li>
+                    <a class="scroll" href="/">首页</a>
+                  </li>
+                  <li>
+                    <a class="scroll" href="/">商品</a>
+                  </li>
+                </ul>
+                <!--=== 帐号操作 ===-->
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="divider" role="separator"></li>
+                  <li>
+                    <form class="button_to" method="get" action="/users/sign_in"><input class="btn btn-default navbar-btn" type="submit" value="登录"/></form>
+                  </li>
+                  <li>
+                    <form class="button_to" method="get" action="/users/sign_up"><input class="btn btn-default navbar-btn" type="submit" value="注册"/></form>
+                  </li>
+                </ul>
+                <!--=== 搜索栏 ===-->
+                <form class="navbar-form navbar-right" action="/jobs/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+                  <div class="input-group search-box">
+                    <input type="text" class="form-control" name="keyword" placeholder="搜索商品" value="">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+    <body data-spy="scroll" data-target=".nav-top">
+      <!--======== 网站头图 =========-->
 
-<%= render "devise/shared/links" %>
+      <div class="row user_setup">
+       <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 user_setup_content">
+         <div class="row">
+           <div class="col-md-10 col-md-offset-1">
+           <h2><span class="fa fa-sign-in"></span> 登入</h2>
+           <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="k70fETK5OzkoBgrLMRSvQnJUR8HmtjwBWN398iCaDJo62pTUIjegrenbFB6YK+3VIvavzzWPNx85eVfAZg45fA==" />
+             <div class="form-inputs">
+               <div class="form-group email optional user_email"><input class="form-control string email optional" autofocus="autofocus" placeholder="you@example.com" type="email" value="" name="user[email]" id="user_email" /></div>
+               <div class="form-group password optional user_password"><input class="form-control password optional" placeholder="密码" type="password" name="user[password]" id="user_password" /></div>
+               <div class="form-group boolean optional user_remember_me"><div class="checkbox"><input value="0" type="hidden" name="user[remember_me]" /><label class="boolean optional" for="user_remember_me"><input class="boolean optional" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />记住我</label></div></div>
+               <a class="psw" href="/users/password/new">忘记密码？</a>
+             </div>
+
+             <div class="form-actions">
+               <input type="submit" name="commit" value="登入" class="btn btn-default button" data-disable-with="登入" />
+             </div>
+     </form>      <hr />
+             <div class="account">
+               <a href="/users/sign_up">现在就加入 哆啦A梦的百宝箱。</a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+    </body>
+    </html>
+
+
+
+    <footer class="footer">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-2 col-xs-4">
+            <h4>购物指南</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#s">购物流程</a>
+              </li>
+              <li>
+                <a href="#s">常见问题</a>
+              </li>
+              <li>
+                <a href="#s">会员介绍</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-xs-4">
+            <h4>售后服务</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#s">售后政策</a>
+              </li>
+              <li>
+                <a href="#s">退款说明</a>
+              </li>
+              <li>
+                <a href="#s">取消订单</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-xs-4">
+            <h4>关于我们</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#s">公司介绍</a>
+              </li>
+              <li>
+                <a href="#s">常见问题</a>
+              </li>
+              <li>
+                <a href="#s">联系方式</a>
+              </li>
+            </ul>
+          </div>
+           <p>Designed By 张昕&李旋</p>
+            <a href="http://realanalysis-blog.logdown.com/" target="_blank">http://realanalysis-blog.logdown.com/</a>
+            <br><a href="http://lixuan310-blog.logdown.com/" target="_blank">http://lixuan310-blog.logdown.com/</a></br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    </body>
+    </html>

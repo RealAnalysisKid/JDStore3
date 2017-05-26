@@ -1,3 +1,77 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//---------Navbar---------
+
+.body {
+  a:hover{
+    color: blue!important;
+  }
+}
+
+.navbar {
+    background-color: #80bcf7 !important;
+    a {
+      color: #c6ddec !important;
+    }
+    a:hover {
+      color: #b2e0ff !important;
+    }
+    border-color: #212121;
+    margin-bottom: 0;
+
+    border-radius: 0;
+}
+
+
+//--------category-list-------//
+
+.category-list {
+  text-align: center;
+  img {
+    width: 200px;
+    min-height: 200px;
+    margin: auto;
+  }
+}
+
+.product-box {
+  text-align: center;
+  img {
+   width: 200px;
+   min-height: 200px;
+   margin:auto;
+ }
+}
+
+//-------product-point----//
+.product-point {
+  img {
+    width: 100%;
+  }
+
+  margin-bottom: 50px;
+}
+
+
+//---------Footer---------
+
+.footer {
+  background-color:#0564c1;
+
+  p {
+    color: white;
+    margin-top: 30px;
+  }
+
+  h4 {
+    color: white;
+    margin-top: 30px;
+  }
+
+  a {
+    color: white;
+    margin-top: 30px;
+  }
+}
