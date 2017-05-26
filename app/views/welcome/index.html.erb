@@ -6,67 +6,12 @@
   <body>
     <header id="home" data-spy="scroll" data-target="#top-nav">
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="navbar navbar-default navbar-fixed-top default-menu menu-4" role="navigation">
-            <div class="container">
-              <div class="navbar-header">
-                <!--=== Logo ===-->
-                <a class="navbar-brand default-logo scroll" href="#">
-                  哆啦A梦的百宝箱
-                </a>
-              </div>
-              <div class="collapse navbar-collapse top-nav" id="menu-4">
-                <!--=== 网站连结 ===-->
-                <ul class="nav navbar-nav navbar-left">
-                  <li>
-                    <a class="scroll" href="#">首页</a>
-                  </li>
-                  <li>
-                    <a class="scroll" href="/procuts">商品</a>
-                  </li>
-                </ul>
-                <!--=== 帐号操作 ===-->
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="divider" role="separator"></li>
-                  <li>
-                    <form class="button_to" method="get" action="/users/sign_in"><input class="btn btn-default navbar-btn" type="submit" value="登录"/></form>
-                  </li>
-                  <li>
-                    <form class="button_to" method="get" action="/users/sign_up"><input class="btn btn-default navbar-btn" type="submit" value="注册"/></form>
-                  </li>
-                  <!-- 使用者下拉式選單 -->
-               <li class='dropdown'>
-               <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
-                 您好
-                 <b class='caret'></b>
-               </a>
-               <!-- 下拉選單 -->
-               <ul class='dropdown-menu'>
-                 <!-- admin 後台 -->
-                 <!-- user 選項 -->
-                 <li> <a href="/account/users/7/edit">我的帳戶</a> </li>
-                 <li> <a href="/account/orders">我的訂單</a> </li>
-                 <li class="divider"> </li>
-                 <li> <a rel="nofollow" data-method="delete" href="/users/sign_out">登出</a> </li>
-               </ul>
-             </li>
-         </ul>
-                </ul>
-                <!--=== 搜索栏 ===-->
-                <form class="navbar-form navbar-right" action="/jobs/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
-                  <div class="input-group search-box">
-                    <input type="text" class="form-control" name="keyword" placeholder="搜索商品" value="">
-                    <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit">
-                        <i class="fa fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+              <%= render "common/navbar" %>
+
+
+
       </div>
     </header>
 
