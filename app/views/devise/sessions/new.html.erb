@@ -5,51 +5,14 @@
 
   <body>
     <header id="home" data-spy="scroll" data-target="#top-nav">
+
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="navbar navbar-default navbar-fixed-top default-menu menu-4" role="navigation">
-            <div class="container">
-              <div class="navbar-header">
-                <!--=== Logo ===-->
-                <a class="navbar-brand default-logo scroll" href="/">
-                  哆啦A梦的百宝箱
-                </a>
-              </div>
-              <div class="collapse navbar-collapse top-nav" id="menu-4">
-                <!--=== 网站连结 ===-->
-                <ul class="nav navbar-nav navbar-left">
-                  <li>
-                    <a class="scroll" href="/">首页</a>
-                  </li>
-                  <li>
-                    <a class="scroll" href="/">商品</a>
-                  </li>
-                </ul>
-                <!--=== 帐号操作 ===-->
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="divider" role="separator"></li>
-                  <li>
-                    <form class="button_to" method="get" action="/users/sign_in"><input class="btn btn-default navbar-btn" type="submit" value="登录"/></form>
-                  </li>
-                  <li>
-                    <form class="button_to" method="get" action="/users/sign_up"><input class="btn btn-default navbar-btn" type="submit" value="注册"/></form>
-                  </li>
-                </ul>
-                <!--=== 搜索栏 ===-->
-                <form class="navbar-form navbar-right" action="/jobs/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
-                  <div class="input-group search-box">
-                    <input type="text" class="form-control" name="keyword" placeholder="搜索商品" value="">
-                    <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit">
-                        <i class="fa fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+              <%= render "common/navbar" %>
+
+
+
       </div>
     </header>
 
@@ -81,69 +44,6 @@
        </div>
      </div>
 
-
-    </body>
-    </html>
-
-
-
-    <footer class="footer">
-    <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <div class="row">
-          <div class="col-md-2 col-xs-4">
-            <h4>购物指南</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#s">购物流程</a>
-              </li>
-              <li>
-                <a href="#s">常见问题</a>
-              </li>
-              <li>
-                <a href="#s">会员介绍</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-2 col-xs-4">
-            <h4>售后服务</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#s">售后政策</a>
-              </li>
-              <li>
-                <a href="#s">退款说明</a>
-              </li>
-              <li>
-                <a href="#s">取消订单</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-2 col-xs-4">
-            <h4>关于我们</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#s">公司介绍</a>
-              </li>
-              <li>
-                <a href="#s">常见问题</a>
-              </li>
-              <li>
-                <a href="#s">联系方式</a>
-              </li>
-            </ul>
-          </div>
-           <p>Designed By 张昕&李旋</p>
-            <a href="http://realanalysis-blog.logdown.com/" target="_blank">http://realanalysis-blog.logdown.com/</a>
-            <br><a href="http://lixuan310-blog.logdown.com/" target="_blank">http://lixuan310-blog.logdown.com/</a></br>
-            <br>
-            <br>
-            <br>
-          </div>
-        </div>
-      </div>
-    </footer>
 
     </body>
     </html>
