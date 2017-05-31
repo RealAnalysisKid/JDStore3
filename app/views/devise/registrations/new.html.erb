@@ -1,48 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>多啦A梦的百宝箱 - 订制专属的哆啦A梦</title>
-
-  <body>
-    <header id="home" data-spy="scroll" data-target="#top-nav">
-      <div class="row">
-
-
-              <%= render "common/navbar" %>
-
-
-
-      </div>
-    </header>
-
-    <body data-spy="scroll" data-target=".nav-top">
-      <!--======== 网站头图 =========-->
-
-            <div class="row user_setup">
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 user_setup_content">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-            <h2><span class="fa fa-user-circle-o"></span> 注册</h2>
-            <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="yzMfZmGXIiCOHf4eW+oflCgIB2xlwoZSJ4Na0uB6H+NiVJSjcRm5tE/A4Mvy1V0DeKrvYrb7jUxGJ/Dgpu4qBQ==" />
-              <div class="form-inputs">
-                <div class="form-group email required user_email"><input class="form-control string email required" autofocus="autofocus" required="required" aria-required="true" placeholder="you@example.com" type="email" value="" name="user[email]" id="user_email" /></div>
-                <div class="form-group string required user_nickname"><input class="form-control string required" required="required" aria-required="true" placeholder="用户名" type="text" name="user[nickname]" id="user_nickname" /></div>
-                <div class="form-group password required user_password"><input class="form-control password required" maxlength="16" required="required" aria-required="true" placeholder="设定6-16位数密码" size="16" type="password" name="user[password]" id="user_password" /></div>
-                <div class="form-group password required user_password_confirmation"><input class="form-control password required" maxlength="16" required="required" aria-required="true" placeholder="确认密码" size="16" type="password" name="user[password_confirmation]" id="user_password_confirmation" /></div>
-              </div>
-              <div class="form-actions">
-                <input type="submit" name="commit" value="注册" class="btn btn-default button" data-disable-with="注册" />
-              </div>
-      </form>      <hr />
-              <div class="account">
-                <a href="/users/sign_in">已經是哆啦A梦的百宝箱 用户了吗？按此登录。</a><br />
-              </div>
-            </div>
+<!-- -----登录界面设计------- -->
+<div class="row user_setup">
+  <div class="col-md-4 col-md-offset-4 user_setup_content">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>
+        <span class="fa fa-user-circle-o"></span>
+        帐号注册</h2>
+      <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token" value="PwKZy8KWshSAlUyRN6ypyOwpi0dE+Z2SnEoxiE/t3rnm6viOjW+Q/EAUVQJtia9KuLxBelENaIQKXHt8oC3v5A=="/>
+        <div class="form-inputs">
+          <div class="form-group email required user_email"><input class="form-control string email required" autofocus="autofocus" required="required" aria-required="true" placeholder="请输入常用的邮箱地址" type="email" value="" name="user[email]" id="user_email"/></div>
+          <div class="form-group string required user_name"><input class="form-control string required" required="required" aria-required="true" placeholder="请输入真实姓名" type="text" name="user[name]" id="user_name"/></div>
+          <div class="form-group radio_buttons required user_is_admin"><input type="hidden" name="user[is_admin]" value=""/>
+            <span class="radio">
+              <label for="user_is_admin_false"><input class="radio_buttons required" required="required" aria-required="true" readonly="readonly" type="radio" value="false" checked="checked" name="user[is_admin]" id="user_is_admin_false"/>一般用户</label>
+            </span>
+            <span class="radio">
+              <label for="user_is_admin_true"><input class="radio_buttons required" required="required" aria-required="true" type="radio" value="true" name="user[is_admin]" id="user_is_admin_true"/>企业用户</label>
+            </span>
           </div>
+          <div class="form-group password required user_password"><input class="form-control password required" maxlength="16" required="required" aria-required="true" placeholder="请输入6-16位密码" size="16" type="password" name="user[password]" id="user_password"/></div>
+          <div class="form-group password required user_password_confirmation"><input class="form-control password required" maxlength="16" required="required" aria-required="true" placeholder="确认密码" size="16" type="password" name="user[password_confirmation]" id="user_password_confirmation"/></div>
         </div>
+        <div class="form-actions">
+          <input type="submit" name="commit" value="注册" class="btn btn-default button" data-disable-with="注册"/>
+        </div>
+      </form>
+      <hr/>
+      <div class="account">
+        <a href="/users/sign_in">已有帐号，立即登录</a><br/>
       </div>
-
-
-
-</body>
-</html>
+    </div>
+  </div>
+</div>
