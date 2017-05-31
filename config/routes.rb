@@ -37,6 +37,7 @@ Rails.application.routes.draw do
      collection do
        get :authorintro
        get :roleintro
+       get :news
      end
    end
 
