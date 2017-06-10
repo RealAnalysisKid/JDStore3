@@ -5,6 +5,6 @@ bclass CreateCartItems < ActiveRecord::Migration[5.0]
             t.integer :product_id
             t.integer :quantity, default: 1
       t.timestamps
-    endß
+    end
   end
 end
